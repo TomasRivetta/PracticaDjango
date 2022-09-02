@@ -2,10 +2,10 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from .models import Curso,Profesor,Estudiante,Entregable
 from AppCoder.forms import CursoFormulario,ProfesorFormulario,EstudianteFormulario,EntregableFormulario
-# Create your views here.
 
 def inicio(request):
     return render(request, "Appcoder/inicio.html")
+
 
 def busquedaComision(request):
     return render(request, "AppCoder/busquedaComision.html")
@@ -42,6 +42,7 @@ def comisionFormulario(request):
     else:
         miFormulario = CursoFormulario()
         return render(request, "AppCoder/comisionFormulario.html", {"miFormulario":miFormulario})
+
 
 def busquedaProfesor(request):
     return render(request, "Appcoder/busquedaProfesor.html")
@@ -81,6 +82,7 @@ def profesorFormulario(request):
         miFormulario = ProfesorFormulario()
         return render(request, "AppCoder/profesorFormulario.html",{"miFormulario":miFormulario})
 
+
 def busquedaEstudiante(request):
     return render(request, "Appcoder/busquedaEstudiante.html")
 
@@ -117,6 +119,7 @@ def estudianteFormulario(request):
     else:
         miFormulario = EstudianteFormulario()
         return render(request, "AppCoder/estudianteFormulario.html",{"miFormulario":miFormulario})
+
 
 def busquedaEntregables(request):
     return render(request, "Appcoder/busquedaEntregables.html")

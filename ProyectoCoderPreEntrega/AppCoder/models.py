@@ -8,7 +8,7 @@ class Curso(models.Model):
     profesor = models.CharField(max_length=50)
 
     def __str__(self):
-        return self.nombre + " - " + str(self.comision) + " - " + self.profesor
+        return self.nombre + " - " + str(self.comision)
 
 class Profesor(models.Model):
     nombre = models.CharField(max_length=50)
@@ -17,7 +17,7 @@ class Profesor(models.Model):
     profesion = models.CharField(max_length=50)
 
     def __str__(self):
-        return self.nombre + " - " + self.apellido + " - " + self.email + " - " + self.profesion
+        return self.nombre + " - " + self.apellido
 
 class Estudiante(models.Model):
     nombre = models.CharField(max_length=50)
@@ -25,7 +25,7 @@ class Estudiante(models.Model):
     email = models.EmailField()
 
     def __str__(self):
-        return self.nombre + " - " + self.apellido + " - " + self.email
+        return self.nombre + " - " + self.apellido
 
 class Entregable(models.Model):
     nombre = models.CharField(max_length=50)
@@ -33,4 +33,4 @@ class Entregable(models.Model):
     entregado = models.CharField(max_length=50)
 
     def __str__(self):
-        return self.nombre + " - " + self.fecha_entrega + " - " + self.entregado
+        return self.nombre + " - " + self.fecha_entrega
